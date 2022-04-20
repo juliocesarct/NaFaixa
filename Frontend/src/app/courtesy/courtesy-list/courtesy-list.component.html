@@ -1,0 +1,22 @@
+<div class="row">
+    <div *ngFor="let courtesy of courtesies$ | async " class="card col-5 mt-5 ml-5">
+
+        <a href="#" type="button" class="row btn-light text-decoration-none">
+            <div class="col-4 p-1">
+                <img style="height: 15rem;" class="card-img" [src]=courtesy.photo alt="Card image cap">
+            </div>
+            <div class="col-8">
+                <h5 class="card-title mt-3">{{courtesy.name}}</h5>
+
+                <div class="card-body">
+                    <p class="card-text">{{courtesy.desc}}</p>
+                </div>
+
+                <div class="card-footer bg-transparent">
+                    <p class="card-text"><small class="text-muted">Criado em {{ courtesy.createdAt | date:'medium' }}</small></p>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</div>
